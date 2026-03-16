@@ -1,0 +1,161 @@
+.feedback-buttons {
+  background: linear-gradient(135deg, #1a4a6e 0%, #0f3352 100%);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 8px 16px rgba(26, 74, 110, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feedback-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.feedback-header p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.feedback-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.feedback-btn {
+  flex: 1;
+  max-width: 200px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.feedback-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.feedback-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.feedback-btn.success {
+  background: #10b981;
+  color: white;
+}
+
+.feedback-btn.success:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.feedback-btn.failure {
+  background: #ef4444;
+  color: white;
+}
+
+.feedback-btn.failure:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.feedback-btn.confirming {
+  animation: pulse 1s infinite;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.feedback-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.feedback-icon {
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.feedback-text {
+  position: relative;
+  z-index: 1;
+}
+
+.feedback-hint {
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  margin: 0;
+  opacity: 0.95;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+@media (max-width: 600px) {
+  .feedback-actions {
+    flex-direction: column;
+  }
+  
+  .feedback-btn {
+    max-width: 100%;
+  }
+}

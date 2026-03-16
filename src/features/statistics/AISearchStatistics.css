@@ -1,0 +1,109 @@
+.ai-search-statistics {
+  background: linear-gradient(135deg, #1a4a6e 0%, #0f3352 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(26, 74, 110, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1.5rem;
+  color: white;
+}
+
+.ai-search-statistics .stats-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.ai-search-statistics .stats-icon {
+  font-size: 1.5rem;
+}
+
+.ai-search-statistics .stats-header h3 {
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+.ai-search-statistics .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-search-statistics .stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.25rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.ai-search-statistics .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ai-search-statistics .stat-card.highlight {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.ai-search-statistics .stat-card.warning {
+  background: rgba(255, 152, 0, 0.2);
+  border-color: rgba(255, 152, 0, 0.4);
+}
+
+.ai-search-statistics .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ai-search-statistics .stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ai-search-statistics .stats-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-search-statistics .info-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.ai-search-statistics .info-text strong {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .ai-search-statistics .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-search-statistics .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
